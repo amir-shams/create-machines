@@ -29,7 +29,7 @@ data "vsphere_virtual_machine" "template" {
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 data "vsphere_folder" "folder" {
-  path  = "/${data.vsphere_datacenter.datacenter.name}/vm/${var.vmfolder}"
+  path = "/${data.vsphere_datacenter.datacenter.name}/vm/${var.vmfolder}"
 }
 
 
@@ -39,9 +39,9 @@ resource "vsphere_virtual_machine" "create-vm" {
   #/* name                   = var.node_name[count.index] */
   name = each.key
   # When You Use Pool Id Use This Line
-  resource_pool_id       = data.vsphere_resource_pool.pool.id
+  resource_pool_id = data.vsphere_resource_pool.pool.id
   # When You Use Cluster Id Use This Line
-#  resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
+  #  resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id           = data.vsphere_datastore.datastore.id
   num_cpus               = var.cpu
   memory                 = var.memory
@@ -82,7 +82,7 @@ resource "vsphere_virtual_machine" "create-vm" {
         ipv4_address = var.eth_0[each.key]
         ipv4_netmask = var.netmask
       }
-      ipv4_gateway = var.gateway
+      ipv4_gateway    = var.gateway
       dns_server_list = var.dns_server_list[each.key]
       # config for another interface
       network_interface {

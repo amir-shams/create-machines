@@ -3,32 +3,32 @@ variable "vsphere_user" {}
 variable "vsphere_password" {}
 
 variable "datacenter" {
-  type = string
+  type    = string
   default = "< Your Datacenter Name >"
 }
 
 variable "datastore" {
-  type = string
+  type    = string
   default = "< Your Datastore name >"
 }
 
 variable "pool" {
-  type = string
+  type    = string
   default = "< Your Pool Name >"
 }
 # Network Name
 variable "network_0" {
-  type = string
+  type    = string
   default = "< Your Network-0 Name >"
 }
 # Network Name
 variable "network_1" {
-  type = string
+  type    = string
   default = "< Your Network-1 Name >"
 }
 
 variable "template" {
-  type = string
+  type    = string
   default = "< Your Template Name >"
 }
 
@@ -44,8 +44,8 @@ variable "template" {
 variable "eth_0" {
   type = map(string)
   default = {
-    "key" = "value",
-    "< Your IpAddress >" = "<Name>",
+    "key"                 = "value",
+    "< Your IpAddress >"  = "<Name>",
     "< Your IpAddress2 >" = "<Name>"
   }
 }
@@ -62,8 +62,8 @@ variable "eth_0" {
 variable "eth_1" {
   type = map(string)
   default = {
-    "key" = "value",
-    "< Your IpAddress >" = "<Name>",
+    "key"                 = "value",
+    "< Your IpAddress >"  = "<Name>",
     "< Your IpAddress2 >" = "<Name>"
   }
 }
@@ -80,19 +80,19 @@ variable "eth_1" {
 variable "node_name" {
   type = map(string)
   default = {
-    "key" = "value",
-    "< Your NodeName >" = "<Name>",
+    "key"                = "value",
+    "< Your NodeName >"  = "<Name>",
     "< Your NodeName2 >" = "<Name>"
   }
 }
 
 variable "domain" {
-  type = string
+  type    = string
   default = "< Your Domain Address Like 'dc.test.prod' >"
 }
 
 variable "gateway" {
-  type = string
+  type    = string
   default = "< Your Gateway Ip Address >"
 }
 
@@ -108,8 +108,8 @@ variable "gateway" {
 variable "hostname" {
   type = map(string)
   default = {
-    "key" = "value",
-    "< Your HostName >" = "<Name>",
+    "key"                = "value",
+    "< Your HostName >"  = "<Name>",
     "< Your HostName2 >" = "<Name>"
   }
 }
@@ -120,36 +120,36 @@ variable "hostname" {
 } */
 
 variable "dns_server_list" {
-  type    = map(string)
+  type = map(string)
   default = {
-    "key" = "value",
-    "< Your DNS >" = "<Name>",
+    "key"           = "value",
+    "< Your DNS >"  = "<Name>",
     "< Your DNS2 >" = "<Name>"
   }
 }
 
 variable "cpu" {
-  type = number
+  type    = number
   default = 1
 }
 
 variable "memory" {
-  type = number
+  type    = number
   default = 2048
 }
 
 variable "netmask" {
-  type = number
+  type    = number
   default = 24
 }
 
 variable "vmfolder" {
-  type = string
+  type    = string
   default = "< Your Folder Name >"
 }
 
 variable "cluster_name" {
-  type = string
+  type    = string
   default = "< Your Cluster Name >"
 }
 

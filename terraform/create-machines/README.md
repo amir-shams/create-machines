@@ -75,6 +75,17 @@ terraform destroy
 ```
  
  
+### You can see your Terraform graph 
 
+First install this package on your system :
 
+```
+sudo apt install graphviz
+```
+then you must use this command to view your plan as svg
+```
+terraform graph | dot -Tsvg > graph.svg
+```
+
+now you can see your graph {{  graph.svg  }}
 
